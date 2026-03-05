@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>John Kuka - Digital Eulogy QR Code</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+            .container {
+                padding: 1.5rem;
+                margin: 0.5rem;
+            }
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        .qr-code {
+            margin: 2rem 0;
+        }
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+        }
+        .instructions {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        .url {
+            color: #3498db;
+            word-break: break-all;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>John 'Kuka' Nyikuli Shikanga</h1>
+        <p>Digital Eulogy & Memorial</p>
+        
+        <div class="qr-code">
+            <img src="data:image/png;base64,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" alt="QR Code for John Kuka's Digital Eulogy" />
+        </div>
+        
+        <p class="instructions">
+            Scan this QR code to visit the digital memorial webpage
+        </p>
+        
+        <p class="url">
+            http://localhost:5174/
+        </p>
+    </div>
+</body>
+</html>
+    
