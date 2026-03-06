@@ -165,7 +165,7 @@ function HomePage() {
   return (
     <HomeContainer>
       <HeroSection>
-        <HeroTitle>WE ARE CELEBRATING THE LIFE OF</HeroTitle>
+        <HeroTitle> CELEBRATING THE LIFE OF</HeroTitle>
         <HeroSubtitle>JOHN 'KUKA' NYIKULI SHIKANGA</HeroSubtitle>
         {mainImage && <MainImage src={mainImage} alt="John Kuka" />}
         <Dates>August 8, 1942 - March 1, 2026</Dates>
