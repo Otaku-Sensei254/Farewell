@@ -198,7 +198,7 @@ function GalleryPage() {
       'WhatsApp Image 2026-03-05 at 08.25.25.jpeg',
       'WhatsApp Image 2026-03-05 at 08.25.29.jpeg',
       'WhatsApp Image 2026-03-05 at 08.25.57 (1).jpeg',
-      'WhatsApp Image 2026-03-05 at 08.25.57.jpeg'
+      'WhatsApp Image 2026-03-05 at 08.25.57.jpeg',
     ];
 
     setImages(imageList.map((img, index) => {
