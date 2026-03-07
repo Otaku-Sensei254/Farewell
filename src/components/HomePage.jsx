@@ -159,7 +159,7 @@ function HomePage() {
 
   useEffect(() => {
     // Set a default main image from the available images
-    setMainImage("/images/WhatsApp Image 2026-03-04 at 23.37.06.jpeg");
+    setMainImage("/images/WhatsApp Image 2026-03-04 at 14.20.10.jpeg");
   }, []);
 
   return (
