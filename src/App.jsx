@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import HomePage from './components/HomePage';
 import GalleryPage from './components/GalleryPage';
+import TributesPage from './components/TributesPage';
+import SongPage from './components/SongPage';
 import Navigation from './components/Navigation';
 
 const GlobalStyle = createGlobalStyle`
@@ -71,6 +73,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/tributes" element={<TributesPage />} />
+          <Route path="/song" element={<SongPage />} />
         </Routes>
       </AppContainer>
     </Router>
