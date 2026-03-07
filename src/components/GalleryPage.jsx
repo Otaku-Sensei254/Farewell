@@ -237,7 +237,7 @@ function GalleryPage() {
       ];
       
       return {
-        src: `/src/images/${img}`,
+        src: `/images/${img}`,
         caption: captions[index] || `John's Memorial ${index + 1}`,
         id: index
       };
