@@ -140,48 +140,53 @@ function TributesPage() {
   const [tributes, setTributes] = useState([
     {
       id: 1,
-      author: "HELEN MULAGOLI",
-      relation: "First Wife",
-      content: `My dear husband John 'Kuka',
+      author: "WILLINGSTONE NYIKULI LUNANI",
+      relation: "Son",
+      content: `I am humbled on this day when paying tribute to my late Father and Brother Mzee John Nyikuli Shikanga. In my heart I refer to him as ‘John Best’ Why? Because he endeavored to give me the best things in life:
 
-You were the rock of our family and the love of my life. Your dedication to our son Willingstone and your unwavering faith in Jehovah were the foundation of our home. I remember the early days in Nairobi when you worked as a Van Salesman, always coming home with stories that made us laugh.
+He ensured that he got the best formal education in prestigious Nursery, Primary, Secondary and College Institutions available.
 
-Your patience and wisdom guided us through every challenge. When you joined Jehovah's Witnesses in 1967, I saw a new light in your eyes - a purpose that gave you strength. You served faithfully as an Elder, touching so many lives with your Bible teachings.
+The best gift ‘John Best’ gave me was Christian Education in Jehovah’s organization. He patiently waited for me to dedicate my life to Jehovah and get baptized and travelled to Nairobi to Witness it. On paper I was born alone however in reality I find myself surrounded by many genuine brothers and sisters - corner to corner, world over courtesy of him.
 
-Though you are no longer with us physically, your love continues to guide us. Thank you for being the best husband and father anyone could ask for. Your legacy lives on through our son and the generations to come.
+He inculcated in me a spirit of fairness, reasonableness and perseverance when times are hard for which you can see and I say thank you.
 
-Until we meet again in paradise, your loving wife,
-Helen`
+As we lay him to rest today, I boldly take over the mantle from him so as to ensure that his dreams and wishes for the family are upheld. My sincere acknowledgements to Mama Monica for taking care of ‘John Best’ in his last 10yrs of life. 
+
+Special thanks to our brothers and sisters at Butali and the surrounding Congregations. May Jehovah bless the good work of your hands – Asante sana!
+
+‘’ Kusudi la Yehova Litatimizwa” Isa 46; 11 | Yoh 11:25`
     },
     {
       id: 2,
-      author: "MARGARET ALOYA LUNANI",
-      relation: "Daughter-in-law",
-      content: `Dear Father Kuka,
+      author: "HELLEN AYUMA LUNANI",
+      relation: "Granddaughter",
+      content: `I have been blessed to enjoy almost 3 decades of being Kuka’s granddaughter. Kuka was a very present grandfather. He taught me so much and was very supportive in various aspects of my life. One of the fondest memories I shall cherish of Kuka was when he would punctually pick us up from school and take us home. Together with my grandmother they would ensure our holidays began in the very best way possible. Every day at exactly 6am he would wake us up to read the daily text and pray with and for us.
 
-You welcomed me into your family with open arms and treated me as your own daughter. I am forever grateful for the wisdom you shared and the example you set. Your stories of serving Jehovah across the West region of Kenya inspired us all.
+My grandfather set the standard for so many things in my life including my spirituality, education and day-to-day skills. I will really miss Kuka. I will most especially miss hearing his voice anytime I’d call and he would answer the phone by saying “ello my dear/koko/kuka”.
 
-Watching you with our children Samuel and Hellen showed us what true grandfatherly love looks like. You had patience, kindness, and time for every question they asked. Your mastery of Bible teachings made complex truths simple to understand.
-
-Thank you for showing us how to live a life of faith and service. Your legacy of generosity and love will continue through our family. We miss you deeply but find comfort in knowing you are in Jehovah's memory.
-
-With love and respect,
-Margaret`
+We thank Jehovah for the promise of a wonderful future where we will get the chance of welcoming our loved ones whom we have lost in death (Isaiah 26:19) for then I will get the chance to welcome Kuka with the cake flavor that he really loved.`
     },
     {
       id: 3,
-      author: "SAMUEL NYIKULI LUNANI",
+      author: "MARGARET LUNANI",
+      relation: "Daughter-in-law",
+      content: `I have had the privilege of knowing Kuka for the last fifty years. Thirty of these as his daughter-in-law. While growing up in my homestead, we referred to him as ‘Papa Nyikuli’, a reference that is still used to date. He merited that honor because he was my dad’s Bible teacher.
+
+I will miss him dearly because of the way he embraced me when I joined his family. He became my friend and confidant. He ensured that he practiced Bible principles by refusing to submit to customs that degrade daughters-in-law. I had a very good relationship with him. Together with my mother-in-law, they loved my children and actively participated in nurturing them. I will forever be grateful to them.
+
+I will miss the way he loved my cooking, especially chapatis, chicken, fish and cakes. It always gave me a lot of satisfaction and pleasure to watch him enjoying my cakes. I ominously noticed that something was amiss when he did not find the usual pleasure in the chocolate cake that I last baked for him.
+
+Jehovah’s promise of the near future when we shall receive our dead loved ones strengthens our hope of having great times together again with him (Hosea 13 :14).`
+    },
+    {
+      id: 4,
+      author: "SAMUEL LUNANI",
       relation: "Grandson",
-      content: `My dear Grandfather Kuka,
+      content: `Kuka was a man of many firsts in my life. It is through him I have learnt a lot. He taught me the art of slaughter amongst other skills. He was the one who took me to my circumcision when he lured me using a packet of biscuits in 2001.
 
-You were my hero and my best friend. I will always remember your smile and the way you made time for me no matter how busy you were. Your stories about serving Jehovah and your work at Cadbury Schweppes and BRITAM were my favorite.
+All in all he was a teacher, a mentor and a guide in my spiritual life. That is one gap, ‘man of Israel ‘ ,as he called me when whenever met that would be hard to fill.
 
-You taught me more than just Bible truths - you taught me how to be a man of integrity, how to work hard, and how to love Jehovah with all my heart. Your patience when I asked endless questions showed your true character.
-
-Thank you for being the best grandfather anyone could have. Your faith inspires me to continue serving Jehovah faithfully. I promise to make you proud and honor your legacy.
-
-I love you and miss you every day,
-Your grandson Samuel`
+No matter the pain of losing kuka, I hope to see my grandfather in the new world where we will enjoy to see you back stronger healthier and all smiles (Isa 65:20).`
     }
   ]);
 

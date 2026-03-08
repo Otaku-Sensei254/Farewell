@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import HomePage from './components/HomePage';
+import ProgramPage from './components/ProgramPage';
 import GalleryPage from './components/GalleryPage';
 import TributesPage from './components/TributesPage';
 import SongPage from './components/SongPage';
@@ -72,6 +73,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/program" element={<ProgramPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/tributes" element={<TributesPage />} />
           <Route path="/song" element={<SongPage />} />
