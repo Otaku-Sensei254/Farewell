@@ -125,6 +125,7 @@ function Navigation() {
         
         <NavLinks isOpen={isMenuOpen}>
           <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/program" onClick={closeMenu}>Program</NavLink>
           <NavLink to="/gallery" onClick={closeMenu}>Gallery</NavLink>
           <NavLink to="/tributes" onClick={closeMenu}>Tributes</NavLink>
           <NavLink to="/song" onClick={closeMenu}>Song</NavLink>
