@@ -169,8 +169,8 @@ const LyricsText = styled.div`
 const songs = [
   {
     id: 1,
-    title: "Song 2",
-    artist: "WIMBO NA. 151",
+    title: "WIMBO NA. 151",
+    artist: "Atawaita",
     file: "/src/assets/song2.mp3",
     lyrics: `(Ayubu 14:13-15)
     1. 1.Lo! Uhai ni kama ukungu,
@@ -207,43 +207,55 @@ Tu mali yake yeye.
   },
   {
     id: 2,
-    title: "Song 3",
-    artist: "WIMBO NA. 3",
+    title: "WIMBO NA. 156",
+    artist: "Kwa Imani",
     file: "/src/assets/song3.mp3",
-    lyrics: `(Methali 14:26)
-1.Yehova umetupatia
-tumaini bora.
-Latusimua sana,
-tutalitangaza.
-Mahangaiko ya maisha,
-hutufanya tuhofu.
-Nalo tumaini letu
-Linadhoofika.
+    lyrics: `(Zaburi 27:13)
+
+1.Kwa nini niogope?
+Nimwogope adui?
+Nikiwa na Yehova,
+Sitatetemeshwa.
+Mungu wangu yupo nami.
 (KORASI)
-Yehova ataawaita
-Watoke na kuishi.
-Kwani anatamani,
-Kazi ya mikonoye.
-Usiwe na shaka kamwe,
-Mungu atamwinua,
-Kisha twishi milele,
-Tu mali yake yeye.
-2.Ichochee mioyo yetu,
-tusikusahau.
-Watufariji daima,
-tunapolemewa.
-Kutafakari wema wako,
-kunatuimarisha.
-Tuwajulishe wengine
-jina lako kuu.
+Kwa imani, ninalo tumaini.
+Kwa imani, siogopi kamwe.
+Nikiwa na Yehova,
+Nitasonga mbele,
+Najua Mungu yuko nami—
+Kwa imani.
+2.Watumishi wa kale
+Kwa ushikamanifu.
+Walivumilia.
+Watathawabishwa.
+Watafufuka hakika.
 (KORASI)
-Tumaini, nguvu,
-na uhakika;
-zatoka kwako Yehova.
-Ili tuhubiri
-kwa uhakika,
-twakutegemea wewe.
-(Ona pia Zab. 72:13; 14; Met. 3:5.)`
+Kwa imani, ninalo tumaini.
+Kwa imani, siogopi kamwe.
+Nikiwa na Yehova,
+Nitasonga mbele,
+Najua Mungu yuko nami—
+Kwa imani.
+(DARAJA)
+Kwa imani, nayaweza yote.
+Kwa imani, sina shaka.
+Na kwa imani
+Ninaweza kushinda
+Navumilia mateso.
+3.Nasubiri kwa hamu
+Ahadi za Mungu.
+Niwe imara.
+Hivi karibuni
+Yehova atatuokoa.
+(KORASI)
+Kwa imani, ninalo tumaini.
+Kwa imani, siogopi kamwe.
+Nikiwa na Yehova,
+Nitasonga mbele,
+Najua Mungu yuko nami—
+Kwa imani,
+Kwa imani.
+(Ona pia Ebr. 11:1-40.)`
   }
 ];
 
