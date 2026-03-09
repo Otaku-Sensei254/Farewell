@@ -177,13 +177,6 @@ function HomePage() {
           {eulogyContent.eulogy}
         </EulogyText>
       </ContentSection>
-
-      <TributeSection>
-        <TributeTitle>A Son's Tribute</TributeTitle>
-        <TributeText>
-          {eulogyContent.tribute}
-        </TributeText>
-      </TributeSection>
     </HomeContainer>
   );
 }

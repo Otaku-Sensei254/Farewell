@@ -47,9 +47,14 @@ const TributesSubtitle = styled.p`
 
 const TributesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
   padding: 2rem 0;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -128,7 +133,7 @@ const AddTributeButton = styled.button`
   transition: all 0.3s ease;
   margin: 3rem auto;
   display: block;
-  max-width: 300px;
+  width: fit-content;
   
   &:hover {
     transform: translateY(-2px);
@@ -136,8 +141,98 @@ const AddTributeButton = styled.button`
   }
 `;
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  animation: ${fadeIn} 0.4s ease-out;
+`;
+
+const FormTitle = styled.h2`
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 300;
+`;
+
+const FormGroup = styled.div`
+  margin-bottom: 1.5rem;
+`;
+
+const Label = styled.label`
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+  }
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  min-height: 150px;
+  resize: vertical;
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+  }
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+`;
+
+const SubmitButton = styled(AddTributeButton)`
+  margin: 0;
+  padding: 1rem 2rem;
+`;
+
+const CancelButton = styled.button`
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  font-size: 1rem;
+  &:hover {
+    color: var(--primary-color);
+  }
+`;
+
 function TributesPage() {
-  const [tributes, setTributes] = useState([
+  const initialTributes = [
     {
       id: 1,
       author: "WILLINGSTONE NYIKULI LUNANI",
@@ -188,7 +283,49 @@ All in all he was a teacher, a mentor and a guide in my spiritual life. That is 
 
 No matter the pain of losing kuka, I hope to see my grandfather in the new world where we will enjoy to see you back stronger healthier and all smiles (Isa 65:20).`
     }
-  ]);
+  ];
+
+  const [tributes, setTributes] = useState(() => {
+    try {
+      const saved = localStorage.getItem('user_tributes');
+      if (saved) {
+        return [...initialTributes, ...JSON.parse(saved)];
+      }
+    } catch (e) {
+      console.error("Failed to load tributes from localStorage", e);
+    }
+    return initialTributes;
+  });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    author: '',
+    relation: '',
+    content: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.author || !formData.content) return;
+
+    const newTribute = {
+      ...formData,
+      id: Date.now()
+    };
+
+    try {
+      const savedTributes = JSON.parse(localStorage.getItem('user_tributes') || '[]');
+      const updatedUserTributes = [...savedTributes, newTribute];
+      localStorage.setItem('user_tributes', JSON.stringify(updatedUserTributes));
+      setTributes([...initialTributes, ...updatedUserTributes]);
+    } catch (e) {
+      console.error("Failed to save tribute", e);
+      setTributes([...tributes, newTribute]);
+    }
+
+    setIsModalOpen(false);
+    setFormData({ author: '', relation: '', content: '' });
+  };
 
   return (
     <TributesContainer>
@@ -207,9 +344,49 @@ No matter the pain of losing kuka, I hope to see my grandfather in the new world
         ))}
       </TributesGrid>
 
-      <AddTributeButton>
+      <AddTributeButton onClick={() => setIsModalOpen(true)}>
         Add Your Tribute
       </AddTributeButton>
+
+      {isModalOpen && (
+        <ModalOverlay onClick={() => setIsModalOpen(false)}>
+          <ModalContent onClick={e => e.stopPropagation()}>
+            <FormTitle>Add Your Tribute</FormTitle>
+            <form onSubmit={handleSubmit}>
+              <FormGroup>
+                <Label>Your Name</Label>
+                <Input 
+                  required
+                  value={formData.author}
+                  onChange={e => setFormData({...formData, author: e.target.value})}
+                  placeholder="Enter your full name"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label>Relation (e.g., Friend, Brother, Niece)</Label>
+                <Input 
+                  value={formData.relation}
+                  onChange={e => setFormData({...formData, relation: e.target.value})}
+                  placeholder="How did you know Kuka?"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label>Your Message</Label>
+                <TextArea 
+                  required
+                  value={formData.content}
+                  onChange={e => setFormData({...formData, content: e.target.value})}
+                  placeholder="Share your memories..."
+                />
+              </FormGroup>
+              <ButtonGroup>
+                <CancelButton type="button" onClick={() => setIsModalOpen(false)}>Cancel</CancelButton>
+                <SubmitButton type="submit">Submit Tribute</SubmitButton>
+              </ButtonGroup>
+            </form>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </TributesContainer>
   );
 }
