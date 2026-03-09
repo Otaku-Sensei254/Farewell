@@ -270,7 +270,6 @@ const SongPage = () => {
     <SongContainer>
       <SongHeader>
         <SongTitle>Musical Tributes</SongTitle>
-        <SongSubtitle>Songs dedicated to the memory of John 'Kuka' Nyikuli Shikanga</SongSubtitle>
       </SongHeader>
 
       <SongSelector>
